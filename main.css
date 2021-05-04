@@ -1,0 +1,12 @@
+#canvas {
+    border: 2px solid black;
+}
+
+#picture {
+  -webkit-filter: grayscale(1); /* Webkit */
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* W3C */
+}
+#clear-button{
+    height: 400px;
+}

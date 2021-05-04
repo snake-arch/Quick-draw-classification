@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="stylesheet" href="main.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
+        <title>Quick draw</title>
+    </head>
+    <body>
+        <main>
+            <div class="jumbotron">
+                <h3 class="display-4">Doodle classfication </h3>
+                <p>By Gaurav Maindola</p>
+                <hr class="my-4">
+                <p>Draw in the below space and press predict to see what mode of transportation it resembles the most out of:</p>
+                <p>Aircraft carrier, Airplane, Ambulance, Bulldozer, Bus, Canoe, Car, Cruise ship, Firetruck, Flying saucer, Helicopter, Hot air balloon, Pickup truck, Sailboat, Speedboat, Train</p> 
+                <p>PS: please maximize the application before drawing.</p>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <button id="clear-button" class="btn btn-primary float-right" onclick="clrscr()">Clear</button>
+                    <div class="col">
+                        <canvas id="canvas" width="400" height="400"></canvas>
+                        <button id="predict-button" class="btn btn-success float-right float-top" onclick="getPred()">Predict</button>
+                    </div>
+                    <img src="" id="picture" style="display:none"/>
+                    <div class="col">
+                        <h2 class="ml-3">Predictions</h2>
+                        <ol id="prediction-list"></ol>
+                        <div class="form-group">
+                            preview <br>
+                            <canvas id="preview-canvas" width="28" height="28" 
+                                    style="border:1px solid #000000;"></canvas> 
+                        </div>
+                        <div class="col-5">
+                            Prediction Class Histogram
+                            <div id="predict-graph"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        Load index.js after the content of the page
+</head>
+<body onload="init()">
+    <main>
+    <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
+    <div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+    <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+    <div style="position:absolute;top:20%;left:43%;">Eraser</div>
+    <div style="position:absolute;top:22%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+    <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+    <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:10%;">
+    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+    </main>
+</body>
+
+
+<script src="script.js"></script>
+
+</body>
+</html> -->
+
+
